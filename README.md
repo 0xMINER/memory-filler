@@ -1,6 +1,6 @@
 # memory_loader
 
-Simple RAM filler
+A simple RAM filler written using the C++ and WinAPI.
 
 Fills RAM by a certain percentage. May be useful for checking the pagefile. Outputs information about the load of RAM OR RAM and the pagefile. All information is output to the built-in Windows console.
 
