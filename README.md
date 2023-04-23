@@ -1,4 +1,4 @@
-# memory_loader
+# memory_filler
 
 A simple RAM filler written using the C++ and WinAPI.
 
