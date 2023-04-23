@@ -6,7 +6,7 @@ Fills RAM by a certain percentage. May be useful for checking the pagefile. Outp
 
 ## Installation
 
-Build the project in Visual Studio (open `memory_loader.sln` and press F7) or [download on the releases page](https://github.com/0xMINER/memory-loader/releases/tag/beta).
+Build the project in Visual Studio (open `memory_filler.sln` and press F7) or [download on the releases page](https://github.com/0xMINER/memory-loader/releases/tag/beta).
 
 The program should be run as an administrator to avoid any problems.
 
