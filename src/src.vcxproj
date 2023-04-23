@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="memory_loader.cpp" />
+    <ClCompile Include="memory_filler.cpp" />
     <ClCompile Include="memory_update_info.cpp" />
     <ClCompile Include="other_functions.cpp" />
   </ItemGroup>
