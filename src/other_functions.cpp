@@ -14,9 +14,9 @@ void clear_screen()
     CONSOLE_SCREEN_BUFFER_INFO screen_buffer;
     HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD  top_left = { 0, 0 };
-    DWORD  ñhars;
+    DWORD  chars;
 
     GetConsoleScreenBufferInfo(console_handle, &screen_buffer);
-    FillConsoleOutputCharacterA(console_handle, ' ', screen_buffer.dwSize.X * screen_buffer.dwSize.Y, top_left, &ñhars);
+    FillConsoleOutputCharacterA(console_handle, ' ', screen_buffer.dwSize.X * screen_buffer.dwSize.Y, top_left, &chars);
     SetConsoleCursorPosition(console_handle, top_left);
 }

@@ -2,7 +2,6 @@
 #include <conio.h>
 #include <cstdio>
 #include <cmath>
-#include <iostream>
 #include "functions_and_global_variables.h"
 
 bool memory_update_info(MEMORYSTATUSEX& statex)
