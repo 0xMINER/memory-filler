@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
         case key_spacebar:
         case key_one:
 
-            if (memory_loader(&statex.ullTotalPhys, &statex.dwMemoryLoad, statex))
+            if (memory_filler(&statex.ullTotalPhys, &statex.dwMemoryLoad, statex))
                 restart_main = true;
 
             else
@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
 
         case key_two:
 
-            if (memory_loader(&statex.ullTotalPhys, &statex.dwMemoryLoad, statex))
+            if (memory_filler(&statex.ullTotalPhys, &statex.dwMemoryLoad, statex))
                 restart_main = true;
 
             else

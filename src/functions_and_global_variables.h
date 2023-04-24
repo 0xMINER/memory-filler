@@ -17,7 +17,7 @@ inline void* starting_address_VirtualAlloc = {}; // pointer to start of allocate
 
 bool memory_update_info(MEMORYSTATUSEX& statex);
 bool memory_update_info_without_pagefile(MEMORYSTATUSEX& statex);
-bool memory_loader(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTATUSEX& statex);
+bool memory_filler(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTATUSEX& statex);
 
 void clear_screen();
 void exception_handler();

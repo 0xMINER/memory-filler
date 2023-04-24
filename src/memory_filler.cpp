@@ -1,19 +1,19 @@
-#include <windows.h>
+#include <windows.h>restart_memory_filler
 #include <conio.h>
 #include <cstdio>
 #include <cinttypes>
 #include "functions_and_global_variables.h"
 
-bool memory_loader(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTATUSEX& statex)
+bool memory_filler(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTATUSEX& statex)
 {
     uint8_t target_percents = 0;
-    bool restart_memory_loader = false;
+    bool restart_memory_filler = false;
 
     do 
     {
         clear_screen();
 
-        restart_memory_loader = false;
+        restart_memory_filler = false;
 
         GlobalMemoryStatusEx(&statex);  // update RAM info
 
@@ -29,7 +29,7 @@ bool memory_loader(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTAT
             printf("\n\tERROR_COMMITMENT_LIMIT");
             printf("\n\tWas entered >100 %%\n");
 
-            restart_memory_loader = true;
+            restart_memory_filler = true;
             Sleep(3000);
         }
 
@@ -37,13 +37,13 @@ bool memory_loader(uint64_t* total_RAM, DWORD* percent_of_RAM_in_use, MEMORYSTAT
         {
             printf("\n\ttWas entered <= %% RAM usage\n");
 
-            restart_memory_loader = true;
+            restart_memory_filler = true;
             Sleep(3000);
         }
 
         else 
             continue;
-    } while (restart_memory_loader);
+    } while (restart_memory_filler);
 
     GlobalMemoryStatusEx(&statex);  // update RAM info
 
