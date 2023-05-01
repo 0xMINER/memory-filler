@@ -1,4 +1,4 @@
-#include <windows.h>restart_memory_filler
+#include <windows.h>
 #include <conio.h>
 #include <cstdio>
 #include <cinttypes>
