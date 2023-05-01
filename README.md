@@ -10,8 +10,8 @@ Build the project in Visual Studio (open `memory_filler.sln` and press F7) or [d
 
 The program should be run as an administrator to avoid any problems.
 
-## Roadmap
+## TO DO list
 
-* There are plans to add a GUI for easier interaction.
+* Add a GUI for easier interaction.
 
 * Expanded functionality.
