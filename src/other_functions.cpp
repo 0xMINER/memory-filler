@@ -12,8 +12,8 @@ void exception_handler()
 void clear_screen()
 {
     CONSOLE_SCREEN_BUFFER_INFO screen_buffer;
-    HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD  top_left = { 0, 0 };
+    const HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    constexpr COORD  top_left = { 0, 0 };
     DWORD  chars;
 
     GetConsoleScreenBufferInfo(console_handle, &screen_buffer);

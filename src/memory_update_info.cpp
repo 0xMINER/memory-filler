@@ -7,7 +7,7 @@
 bool memory_update_info(MEMORYSTATUSEX& statex)
 {
     double size_pagefile_on_disk;
-    double avaible_pagefile_on_disk;
+    double available_pagefile_on_disk;
 
     while (!_kbhit())
     {
@@ -18,13 +18,13 @@ bool memory_update_info(MEMORYSTATUSEX& statex)
         size_pagefile_on_disk = (statex.ullTotalPageFile - statex.ullTotalPhys) / B_to_GB;
 
         if (statex.ullAvailPageFile < statex.ullAvailPhys)
-            avaible_pagefile_on_disk = statex.ullAvailPageFile / B_to_GB;
+            available_pagefile_on_disk = statex.ullAvailPageFile / B_to_GB;
         else
-            avaible_pagefile_on_disk = (statex.ullAvailPageFile - statex.ullAvailPhys) / B_to_GB;
+            available_pagefile_on_disk = (statex.ullAvailPageFile - statex.ullAvailPhys) / B_to_GB;
 
         printf("\n\n\tSize of pagefile:      %.2lf GB", size_pagefile_on_disk                           );
-        printf("\n\n\tIn use in pagefile:    %.2lf GB", size_pagefile_on_disk - avaible_pagefile_on_disk);
-        printf(  "\n\tAvailable in pagefile: %.2lf GB", avaible_pagefile_on_disk                        );
+        printf("\n\n\tIn use in pagefile:    %.2lf GB", size_pagefile_on_disk - available_pagefile_on_disk);
+        printf(  "\n\tAvailable in pagefile: %.2lf GB", available_pagefile_on_disk                        );
 
         printf("\n\n\n");
         printf("\tRAM in use:    %.2lf GB --- %hu %%\n", (statex.ullTotalPhys - statex.ullAvailPhys) / B_to_GB,       statex.dwMemoryLoad);
