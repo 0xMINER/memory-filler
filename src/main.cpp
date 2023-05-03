@@ -66,7 +66,7 @@ int main(int argc, char* argv[])
             Sleep(2500);
         }
 
-        if (starting_address_VirtualAlloc == NULL)
+        if (starting_address_VirtualAlloc == nullptr)
         {
             printf("\n\n\tUNKNOWN_EXCEPTION: starting address from VirtualAlloc == NULL");
             return 1;
